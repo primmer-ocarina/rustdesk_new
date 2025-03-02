@@ -46,7 +46,7 @@ class ConnectStatus: Reactor.Component {
             return translate('connecting_status');
         }
         if (!handler.using_public_server()) return translate('Ready');
-        return translate('Ready');;
+        return translate('Ready');
     }
 
     event click $(#start-service) () {
