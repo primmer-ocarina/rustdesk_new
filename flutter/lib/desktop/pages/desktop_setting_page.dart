@@ -51,8 +51,10 @@ class _TabInfo {
 enum SettingsTabKey {
   general,
   safety,
+  network,
   display,
   plugin,
+  account,
   about,
 }
 
@@ -180,10 +182,6 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
           settingTabs.add(_TabInfo(tab, 'Security',
               Icons.enhanced_encryption_outlined, Icons.enhanced_encryption));
           break;
-        case SettingsTabKey.network:
-          settingTabs
-              .add(_TabInfo(tab, 'Network', Icons.link_outlined, Icons.link));
-          break;
         case SettingsTabKey.display:
           settingTabs.add(_TabInfo(tab, 'Display',
               Icons.desktop_windows_outlined, Icons.desktop_windows));
@@ -191,10 +189,6 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
         case SettingsTabKey.plugin:
           settingTabs.add(_TabInfo(
               tab, 'Plugin', Icons.extension_outlined, Icons.extension));
-          break;
-        case SettingsTabKey.account:
-          settingTabs.add(
-              _TabInfo(tab, 'Account', Icons.person_outline, Icons.person));
           break;
         case SettingsTabKey.about:
           settingTabs
